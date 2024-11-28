@@ -180,7 +180,6 @@ function removeLastOccurrences(str, value) {
 
   return str.slice(0, index) + str.slice(index + value.length);
 }
-
 /**
  * Calculate the sum of character codes of the given string.
  *
@@ -193,12 +192,8 @@ function removeLastOccurrences(str, value) {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(str) {
-  let sum = 0;
-  for (let i = 0; i < str.length; i + 1) {
-    sum += str.charCodeAt(i);
-  }
-  return sum;
+function sumOfCodes(/* str */) {
+  throw new Error('Not implemented');
 }
 
 /**
@@ -258,8 +253,8 @@ function formatTime(/* minutes, seconds */) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  return str.split('').reverse().join('');
 }
 
 /**
@@ -415,8 +410,8 @@ function extractNameFromTemplate(/* value */) {
  *   unbracketTag('<span>') => 'span'
  *   unbracketTag('<a>') => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  return str.slice(1, str.length - 1);
 }
 
 /**
